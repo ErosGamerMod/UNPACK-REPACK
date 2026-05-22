@@ -38,18 +38,18 @@ done
 echo -e "\n${CIANO}[*] Baixando a versão mais recente do servidor...${RESET}"
 
 # Remove versão antiga para não dar conflito se o cliente rodar de novo
-rm -f erosskin
+rm -f eros
 
 # Faz o download mostrando barra de progresso hacker
-curl -L -o erosskin "https://github.com/ErosGamerMod/UNPACK-REPACK/raw/refs/heads/main/eros"
+curl -L -o eros "https://github.com/ErosGamerMod/UNPACK-REPACK/raw/refs/heads/main/eros"
 
 if [ -f "eros" ]; then
-    chmod +x erosskin
+    chmod +x eros
     echo -e "${VERDE_BRILHANTE}\n [✔] TUDO PRONTO! INICIANDO FERRAMENTA...${RESET}"
     echo -e "${VERDE_BRILHANTE}=========================================${RESET}"
     sleep 1.5
     clear
-    ./erosskin
+    ./eros
 else
     echo -e "\n\033[1;31m [✘] ERRO: Falha ao baixar o arquivo do servidor. Verifique sua conexão.\033[0m"
 fi
