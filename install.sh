@@ -22,7 +22,7 @@ echo -e "\n${CIANO}[*] Verificando dependências do sistema...${RESET}"
 echo -e "${VERDE} [+] Atualizando pacotes (Aguarde)...${RESET}"
 apt update -y && apt upgrade -y -o Dpkg::Options::="--force-confold"
 
-# Lista de pacotes necessários (adicione mais aqui se seu ELF precisar de outros)
+# Lista de pacotes necessários
 PACOTES=(curl python clang libffi)
 
 for pkg in "${PACOTES[@]}"; do
@@ -40,9 +40,10 @@ echo -e "\n${CIANO}[*] Baixando a versão mais recente do servidor...${RESET}"
 # Remove versão antiga para não dar conflito se o cliente rodar de novo
 rm -f eros
 
-# Faz o download mostrando barra de progresso hacker
+# Faz o download salvando como 'eros' (Link corrigido para o arquivo raw correto)
 curl -L -o eros "https://github.com/ErosGamerMod/UNPACK-REPACK/raw/refs/heads/main/eros"
 
+# Agora verifica o arquivo correto ('eros')
 if [ -f "eros" ]; then
     chmod +x eros
     echo -e "${VERDE_BRILHANTE}\n [✔] TUDO PRONTO! INICIANDO FERRAMENTA...${RESET}"
