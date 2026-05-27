@@ -10,7 +10,7 @@ RESET='\033[0m'
 clear
 # Banner de Boas-Vindas Estilizado
 echo -e "${VERDE_BRILHANTE}=========================================${RESET}"
-echo -e "${CIANO}          WELCOME TO SKINTOOL 4.4        ${RESET}"
+echo -e "${CIANO}          WELCOME TO UNPACK & REPACK 4.4        ${RESET}"
 echo -e "${VERDE_BRILHANTE}=========================================${RESET}"
 echo -e "${VERDE} [+] Status:${BRANCO} Inicializando instalador seguro...${RESET}"
 sleep 1
